@@ -4,7 +4,7 @@ const Index = ({ images }) => {
 }
 
 export const getStaticProps =  async() => {
-  const res = await fetch(`${NEXT_PUBLIC_API_URL}/images?populate=image`)
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/images?populate=image`)
   const images = await res.json()
 
   console.log({res, images})
